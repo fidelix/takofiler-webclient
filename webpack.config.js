@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = environment => {
   let env = process.env.NODE_ENV
@@ -20,6 +21,11 @@ module.exports = environment => {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+      new webpack.EnvironmentPlugin({
+        API_URL: 'http://takofiler.anb.l/files/'
+      }),
+    ]
   };
 };

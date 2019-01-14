@@ -45,7 +45,7 @@ const uppy = Uppy({
   ],*/
   browserBackButtonClose: true
   })
-.use(Tus, { target: Dashboard, endpoint: 'http://takofiler.anb.l/files/', autoRetry: false })
+.use(Tus, { target: Dashboard, endpoint: API_URL, autoRetry: false })
 
 uppy.on('upload-success', (file, resp, uploadURL) => {
   console.log(file.name, uploadURL)
