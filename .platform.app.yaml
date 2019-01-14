@@ -1,0 +1,29 @@
+name: ui
+
+type: nodejs:10
+build:
+  flavor: none
+
+web:
+  locations:
+    "/":
+      root: "dist"
+      index:
+        - "index.html"
+      expires: 300s
+      scripts: false
+      allow: false
+      rules:
+        \.(css|js|gif|jpe?g|png|ttf|eot|woff2?|otf|html|ico|svg?)$:
+          allow: true
+        ^/robots\.txt$:
+          allow: true
+
+disk: 256
+hooks:
+  build: |
+    set -e
+    npm install
+    npm run build
+  deploy: |
+    npm run buildenvvar

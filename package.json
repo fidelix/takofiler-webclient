@@ -1,19 +1,23 @@
 {
-  "dependencies": {
-    "@uppy/core": "^0.28.0",
-    "@uppy/dashboard": "^0.28.0",
-    "@uppy/google-drive": "^0.29.0",
-    "@uppy/tus": "^0.28.0",
-    "@uppy/webcam": "^0.29.0",
-    "@uppy/xhr-upload": "^0.29.0"
-  },
   "devDependencies": {
-    "browserify": "^16.2.3",
-    "browserify-css": "^0.14.0"
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   },
   "name": "takofiler-frontend",
   "version": "1.0.0",
   "author": "felipe@fdx.is",
   "license": "Proprietary",
-  "private": true
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@uppy/core": "^0.29.0",
+    "@uppy/dashboard": "^0.29.0",
+    "@uppy/tus": "^0.29.0",
+    "@uppy/xhr-upload": "^0.29.0"
+  }
 }
