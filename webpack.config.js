@@ -23,8 +23,8 @@ module.exports = environment => {
       ]
     },
     plugins: [
-      new webpack.EnvironmentPlugin({
-        API_URL: 'http://takofiler.anb.l/files/'
+      new webpack.DefinePlugin({
+        API_URL: JSON.stringify(process.env.API_URL || 'http://takofiler.anb.l/files/')
       }),
     ]
   };
